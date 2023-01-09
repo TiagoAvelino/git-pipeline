@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hello-pipe
-  name: hello-pipe
+    app: pipelines-vote-api
+  name: pipelines-vote-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-pipe
+      app: pipelines-vote-api
   template:
     metadata:
       labels:
-        app: hello-pipe
+        app: pipelines-vote-api
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/hello-pipe:latest
+        - image: quay.io/openshift-pipeline/vote-api:latest
           imagePullPolicy: Always
-          name: hello-pipe
+          name: pipelines-vote-api
           ports:
             - containerPort: 9000
               protocol: TCP
