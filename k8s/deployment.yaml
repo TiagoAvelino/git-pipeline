@@ -15,7 +15,7 @@ spec:
         app: hello-pipe
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/pipelines-vote-api:latest
+        - image: quay.io/openshift-pipeline/hello-pipe:latest
           imagePullPolicy: Always
           name: hello-pipe
           ports:
